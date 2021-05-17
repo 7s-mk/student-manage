@@ -1,0 +1,18 @@
+server:
+  port: 800
+spring:
+  datasource:
+    url: jdbc:mysql://db.wtu.hll520.cn:10105/G_qinya?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: guo_qinya
+    password: guoqinya
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      max-active: 30
+      min-idle: 5
+      max-wait: 30000
+      validation-query: SELECT 'gqy'
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+
+mybatis:
+  mapper-locations: classpath:mapper/*Dao.xml
